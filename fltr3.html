@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha aplicação</title>
+</head>
+<body>
+    <h1>Minha aplicação</h1>
+<h3>Olá programador digite aqui seu sálario </h3>
+
+<p><input type="number" id="teste" ></p>
+<button onclick="funcao()">Calcular</button>
+<h2>Sálarios maiores que o seu</h2>
+<h4 id="res1"></h4>
+<h2>Sálarios menores que o seu</h2>
+<h4 id="res2"></h4>
+
+<script>
+ const sala =[3700,7400,15000,6500,8387,3000,2500,1700]
+ function checksalMa(sal) {
+  return sal > document.getElementById("teste").value;
+}
+function checksalMe(sal) {
+  return sal < document.getElementById("teste").value;
+}
+function funcao() {
+  document.getElementById("res1").innerHTML = sala.filter(checksalMa);
+  document.getElementById("res2").innerHTML = sala.filter(checksalMe);
+}
+</script>
+</body>
+</html>
